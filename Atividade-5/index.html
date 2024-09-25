@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<style>
+    h1 {
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+
+    .container{
+        display: grid;
+        justify-content: center;
+        color: white;
+    }
+
+    body{
+        background-color: #111111;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Elementos de um Array</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Soma de Elementos de um Array</h1>
+
+    <div class="container">
+        <input type="number" id="inputNumber" placeholder="Digite um número">
+        <button onclick="AdicionarElemento()">Adicionar</button>
+        <button onclick="removerElemento()">Remover</button>
+
+        <h2>Array: <span id="arrayDisplay">[]</span></h2>
+        <h2>Soma: <span id="somaDisplay">0</span></h2>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
