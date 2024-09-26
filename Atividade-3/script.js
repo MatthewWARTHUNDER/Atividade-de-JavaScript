@@ -15,7 +15,7 @@ let position = [
 ];
 
 function init(){
-    selected = []
+    selected = [];
 
     currentPlayer.innerHTML = `JOGADA DA VEZ: ${player}`
 
@@ -29,8 +29,8 @@ function init(){
 
 init();
 
-function newMove(){
-    const index = e.target.getAttribute("data-i")
+function newMove(e){
+    const index = e.target.getAttribute("data-i");
     e.target.innerHTML = player
     e.target.removeEventListener("click", newMove)
     selected[index] = player;
@@ -52,11 +52,10 @@ function check(){
     const items = selected
     .map((item, i) => [item, i])
     .filter((item) => item[0] === playerLastMove)
-    .map((item, i) => item[1]);
+    .map((item) => item[1]);
 
     for (pos of positions){
-        if(pos.every((item) => items.include(item))){
-            alert("O JOGADOR'" + playerLastmove + "' GANHOU!");
+        if(pos.every((item) => items.includes(item))){
             init();
             return;
         }
